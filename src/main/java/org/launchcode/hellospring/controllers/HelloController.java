@@ -41,6 +41,9 @@ public class HelloController {
             greeting = "Hola";
         } else if (language.contains("Japanese")) {
             greeting = "こんにちは";
+        } else if (language.isEmpty() && name.isEmpty()) {
+            greeting = "Hello";
+            name = "World";
         }
         return "<html>" +
                 "<body>" +
@@ -66,7 +69,7 @@ public class HelloController {
 //                "<div style='border:grey; border-width:2px; border-style:inset; display:inline; padding:8px'" +
                 "<form  style='border:grey; border-width:2px; border-style:inset; display:inline; padding:8px'action = '/hello' method ='post'>" + // submit a request to /hello
                 "<input type = 'text' name = 'name' >" +
-                "<select name='language' language='language'" +
+                "<select name='language' language = 'language'>" +
                 "<option value=''>Language</option>" +
                     "<option value='English'>English</option>" +
                     "<option value='German'>German</option>" +
