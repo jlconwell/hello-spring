@@ -45,7 +45,7 @@ public class HelloController {
             greeting = "Hello";
             name = "World";
         }
-        return "<html>" +
+        return language + "<html>" +
                 "<body>" +
                 "<p style='color:red; font-size:26px; font-family:Courier'>" +
                 greeting + " " + name + "!" + "</p>" +
@@ -69,7 +69,7 @@ public class HelloController {
 //                "<div style='border:grey; border-width:2px; border-style:inset; display:inline; padding:8px'" +
                 "<form  style='border:grey; border-width:2px; border-style:inset; display:inline; padding:8px'action = '/hello' method ='post'>" + // submit a request to /hello
                 "<input type = 'text' name = 'name' >" +
-                "<select name='language' language = 'language'>" +
+                "<select name='language'>" +
                 "<option value=''>Language</option>" +
                     "<option value='English'>English</option>" +
                     "<option value='German'>German</option>" +
